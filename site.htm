@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.center {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 500px;
+   height: 500px;
+   margin-top: -250px; /* Half the height */
+   margin-left: -250px; /* Half the width */
+}
+body {
+   background-image: url('box_green_background.png');
+}
+</style>
+</head>
+
+<body>
+
+
+	<script>
+      var isplaying = false;
+      function open_box() {
+
+      }
+      function play() {
+        var audio = document.getElementById("audio");
+        if (isplaying){
+          audio.pause();
+          document.getElementById("box").src = "box.png";
+          document.body.style.backgroundImage =
+          "url('box_green_background.png')";
+          isplaying = false;
+        }
+        else{
+          audio.play();
+          document.getElementById("box").src = "box_open.png";
+          document.body.style.backgroundImage =
+          "url('box_black_background.png')";
+          isplaying = true;
+        }
+      }
+    </script>
+
+    <img src="box.png" alt="this be a box" type="button" 
+    id="box" class="center" onclick="play()">
+    <audio id="audio" src="noise.wav"></audio>
+
+</body>
+</html>
