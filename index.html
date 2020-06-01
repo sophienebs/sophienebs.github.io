@@ -25,14 +25,14 @@ body {
         var audio = document.getElementById("audio");
         if (isplaying){
           audio.pause();
-          document.getElementById("box").src = "box.png";
+          document.getElementById("box").src = "box_closed_handdrawn.png";
           document.body.style.backgroundImage =
           "url('box_green_background.png')";
           isplaying = false;
         }
         else{
           audio.play();
-          document.getElementById("box").src = "box_open.png";
+          document.getElementById("box").src = "box_open_handdrawn.png";
           document.body.style.backgroundImage =
           "url('box_black_background.png')";
           isplaying = true;
@@ -40,7 +40,7 @@ body {
       }
     </script>
 
-    <img src="box.png" alt="this be a box" type="button" 
+    <img src="box_closed_handdrawn.png" alt="this be a box" type="button" 
     id="box" class="center" onclick="play()">
     <audio loop id="audio" src="soundsihate.wav"></audio>
 
