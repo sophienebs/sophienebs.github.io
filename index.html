@@ -11,13 +11,11 @@
    margin-left: -250px; /* Half the width */
 }
 body {
-   background-image: url('box_green_background.png');
+   background-image: url('background__.png');
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 </style>
-</head>
-
-<body>
-
 
 	<script>
       var isplaying = false;
@@ -27,18 +25,22 @@ body {
           audio.pause();
           document.getElementById("box").src = "box_closed_handdrawn.png";
           document.body.style.backgroundImage =
-          "url('box_green_background.png')";
+          "url('background__.png')";
           isplaying = false;
         }
         else{
           audio.play();
           document.getElementById("box").src = "box_open_handdrawn.png";
           document.body.style.backgroundImage =
-          "url('box_black_background.png')";
+          "url('concrete.png')";
           isplaying = true;
         }
       }
     </script>
+
+</head>
+
+<body>
 
     <img src="box_closed_handdrawn.png" alt="this be a box" type="button" 
     id="box" class="center" onclick="play()">
